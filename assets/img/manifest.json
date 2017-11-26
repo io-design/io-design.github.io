@@ -1,6 +1,11 @@
 { 
- "name": "App",
- "icons": [
+  "name": "Q",
+  "short_name": "Q",
+    "lang": "uk",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#44b44e",
+  "icons": [
   {
    "src": "\/android-icon-36x36.png",
    "sizes": "36x36",
@@ -38,4 +43,8 @@
    "density": "4.0"
   }
  ]
+}
+
+{
+  
 }
