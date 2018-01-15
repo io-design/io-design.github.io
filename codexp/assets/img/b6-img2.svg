@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="389" height="60" viewBox="0 0 389 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffd267;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #b2b3b7;
+      }
+    </style>
+  </defs>
+  <path id="Polygon_3" data-name="Polygon 3" class="cls-1" d="M64.816,23.148L47.644,38.169l3.585,21.675L31.552,49.131,11.174,59.688l5.01-21.641L0,22.9l22.775-2.662L33.158,0.314l9.065,20Z"/>
+  <path id="Polygon_3_copy" data-name="Polygon 3 copy" class="cls-1" d="M145.835,23.148l-17.172,15.02,3.586,21.675L112.571,49.131,92.193,59.688,97.2,38.047,81.024,22.9,103.8,20.235,114.177,0.314l9.065,20Z"/>
+  <path id="Polygon_3_copy_3" data-name="Polygon 3 copy 3" class="cls-1" d="M226.855,23.148l-17.173,15.02,3.586,21.675L193.59,49.131,173.212,59.688l5.01-21.641L162.043,22.9l22.775-2.662L195.2,0.314l9.065,20Z"/>
+  <path id="Polygon_3_copy_2" data-name="Polygon 3 copy 2" class="cls-1" d="M307.874,23.148L290.7,38.169l3.585,21.675L274.609,49.131,254.231,59.688l5.01-21.641L243.062,22.9l22.775-2.662L276.215,0.314l9.065,20Z"/>
+  <path id="Polygon_3_copy_4" data-name="Polygon 3 copy 4" class="cls-1" d="M388.893,23.148l-17.172,15.02,3.585,21.675L355.628,49.131,335.25,59.688l5.01-21.641L324.081,22.9l22.775-2.662L357.234,0.314l9.065,20Z"/>
+  <path id="Polygon_3_copy_6" data-name="Polygon 3 copy 6" class="cls-2" d="M388.893,23.148l-17.172,15.02,3.585,21.675-7.11-3.87,0.314-35.385Z"/>
+</svg>
