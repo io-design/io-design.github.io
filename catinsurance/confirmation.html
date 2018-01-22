@@ -18,8 +18,8 @@
       <!-- block1 -->
       <div class="container-fluid block1-fluid confirmation1-fluid">
         <div class="xs-text-center">
-          <a href="index.html" class="">
-            <img src="assets/img/logo.png" class="logo">
+          <a href="index.html" class="toAnimate">
+            <img src="assets/img/logo.png" class="logo ">
           </a> 
         </div>
         <div class="container block1 confirmation1">
@@ -83,5 +83,24 @@
 
 
     </div>  
+
+
+    <script>
+      window.onload = function() {
+        var body = document.querySelector('body');
+        body.classList.add('loadIn');
+        var link = document.querySelectorAll('a.toAnimate');
+        for (var i = 0; i < link.length; i++) {
+          link[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            body.classList.add('loadOut');
+            var self = this;
+            setTimeout(function () { 
+              window.location.href = self.getAttribute("href");
+            }, 400); 
+          })
+        }
+      }
+    </script>
   </body>
 </html>

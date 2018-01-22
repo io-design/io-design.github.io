@@ -10,7 +10,7 @@
     <link href="css/style.css" rel="stylesheet">
   
   </head>    
-  <body>  
+  <body>   
   
     <div class="container-fluid fourK">
       
@@ -19,7 +19,7 @@
       <div class="container-fluid block1-fluid">
         <div class="xs-text-center">
           <a href="#" class="">
-            <img src="assets/img/logo.png" class="logo">
+            <img src="assets/img/logo.png" class="logo toAnimate">
           </a> 
         </div>
         <div class="container block1 "> 
@@ -42,7 +42,7 @@
             <p class="text-center mb-30">Damit deine Tierarztrechnungen nicht explodieren:</p>
 
             <div class="text-center">
-              <a href="checkout.html" class="cst-btn1">Jetzt App Laden & Versichern</a>
+              <a href="checkout.html" class="cst-btn1 toAnimate">Jetzt App Laden & Versichern</a>
             </div> 
           </div> 
         </div> 
@@ -123,7 +123,7 @@
                 <p class="list-p">Deine Verträge sind immer</p>
 
                 <div class="text-center">
-                  <a href="checkout.html" class="cst-btn1">Auswählen</a>
+                  <a href="checkout.html" class="cst-btn1 toAnimate">Auswählen</a>
                 </div> 
               </div> 
 
@@ -145,7 +145,7 @@
                 <p class="list-p">Deine Verträge sind immer</p>
 
                 <div class="text-center">
-                  <a href="checkout.html" class="cst-btn1">Auswählen</a>
+                  <a href="checkout.html" class="cst-btn1 toAnimate">Auswählen</a>
                 </div>
               </div>
             </div>
@@ -168,5 +168,24 @@
 
 
     </div> 
+
+
+    <script>
+      window.onload = function() {
+        var body = document.querySelector('body');
+        body.classList.add('loadIn');
+        var link = document.querySelectorAll('a.toAnimate');
+        for (var i = 0; i < link.length; i++) {
+          link[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            body.classList.add('loadOut');
+            var self = this;
+            setTimeout(function () { 
+              window.location.href = self.getAttribute("href");
+            }, 400); 
+          })
+        }
+      }
+    </script>
   </body>
 </html>
