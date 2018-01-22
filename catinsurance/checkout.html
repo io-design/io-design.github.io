@@ -139,10 +139,10 @@
                 <p class="list-p">3. PAYMENT</p>
                 <hr class="green-hr"/> 
                 <div class="mb-30">
-                  <img src="assets/img/visa.png" class="methods-pay">
-                  <img src="assets/img/mastercard.png" class="methods-pay">
-                  <img src="assets/img/americanexpress.png" class="methods-pay">
-                  <img src="assets/img/cash.png" class="methods-pay">
+                  <img src="" data-src="assets/img/visa.png" class="methods-pay cstLazyLoad">
+                  <img src="" data-src="assets/img/mastercard.png" class="methods-pay cstLazyLoad">
+                  <img src="" data-src="assets/img/americanexpress.png" class="methods-pay cstLazyLoad">
+                  <img src="" data-src="assets/img/cash.png" class="methods-pay cstLazyLoad">
                 </div>
 
                 <div class="row"> 
@@ -210,8 +210,8 @@
                     <div class="form-wrap mb-15">
                       <p class="p-check">
                         <input id="checkBox" type="checkbox">
-                        <img src="assets/img/check1.png" class="check1">
-                        <img src="assets/img/check2.png" class="check2">
+                        <img src="" data-src="assets/img/check1.png" class="check1 cstLazyLoad">
+                        <img src="" data-src="assets/img/check2.png" class="check2 cstLazyLoad">
                         I accept the T&C
                       </p>
                     </div>  
@@ -268,6 +268,14 @@
                 window.location.href = self.getAttribute("href");
               }, 400); 
             })
+          }
+
+          //lazy load
+          var allimages= document.querySelectorAll('img.cstLazyLoad');
+          for (var i=0; i < allimages.length; i++) {
+            if (allimages[i].getAttribute('data-src')) {
+              allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+            }
           }
         }
       </script>

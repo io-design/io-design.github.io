@@ -65,7 +65,7 @@
               </div>
             </div> 
             <div class="col-12 col-md-6">
-              <img src="assets/img/b3-img1.jpg" class="b3-img1">
+              <img src="" data-src="assets/img/b3-img1.jpg" class="b3-img1 cstLazyLoad">
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@
               </div>
             </div> 
             <div class="col-12 col-md-6 order-md-1 d-flex align-items-center">
-              <img src="assets/img/b4-img1.jpg" class="img-responsive mx-auto b4-img1">
+              <img src="" data-src="assets/img/b4-img1.jpg" class="img-responsive mx-auto b4-img1 cstLazyLoad">
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
               <div class="card card1">
                 <div class="card-label">MINI</div>
                 <div class="card-logo">
-                  <img src="assets/img/logo-letter.png">
+                  <img src="" data-src="assets/img/logo-letter.png" class="cstLazyLoad">
                 </div>
 
                 <p class="card-price text-center mb-30">
@@ -132,7 +132,7 @@
               <div class="card card2">
                 <div class="card-label">MAXI</div>
                 <div class="card-logo">
-                  <img src="assets/img/logo-letter.png">
+                  <img src="" data-src="assets/img/logo-letter.png" class="cstLazyLoad">
                 </div>
 
                 <p class="card-price text-center mb-30">
@@ -171,7 +171,10 @@
 
 
     <script>
+
       window.onload = function() {
+
+        //page transition
         var body = document.querySelector('body');
         body.classList.add('loadIn');
         var link = document.querySelectorAll('a.toAnimate');
@@ -184,6 +187,14 @@
               window.location.href = self.getAttribute("href");
             }, 400); 
           })
+        }
+
+        //lazy load
+        var allimages= document.querySelectorAll('img.cstLazyLoad');
+        for (var i=0; i < allimages.length; i++) {
+          if (allimages[i].getAttribute('data-src')) {
+            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+          }
         }
       }
     </script>

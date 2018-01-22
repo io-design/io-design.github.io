@@ -59,16 +59,16 @@
                 <h3 class="mb-20">Thanks for your purchase!</h3>
                 <p class="mb-30">By the way, you can manage your insurance and others via our app</p>
                 <a href="#">
-                  <img src="assets/img/appstore.png">
+                  <img src="" data-src="assets/img/appstore.png" class="cstLazyLoad">
                 </a>
                 <a href="#">
-                  <img src="assets/img/googleapp.png">
+                  <img src="" data-src="assets/img/googleapp.png" class="cstLazyLoad">
                 </a>
               </div>
             </div>
             
             <div class="col-12 col-md-6 d-flex align-items-end">
-              <img src="assets/img/confirmation3-img1.png" class="phone-bot img-responsive mx-auto">
+              <img src="" data-src="assets/img/confirmation3-img1.png" class="phone-bot img-responsive mx-auto cstLazyLoad">
             </div>
           </div>
         </div>
@@ -99,6 +99,14 @@
               window.location.href = self.getAttribute("href");
             }, 400); 
           })
+        }
+
+        //lazy load
+        var allimages= document.querySelectorAll('img.cstLazyLoad');
+        for (var i=0; i < allimages.length; i++) {
+          if (allimages[i].getAttribute('data-src')) {
+            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+          }
         }
       }
     </script>
