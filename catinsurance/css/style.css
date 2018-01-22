@@ -658,15 +658,15 @@ a:hover {
 /* ======== smooth load ======== */
 body {
   opacity: 0;
-  -webkit-transform: translateX(-25px);
-      -ms-transform: translateX(-25px);
-          transform: translateX(-25px); }
+  -webkit-transform: translateX(-50px);
+      -ms-transform: translateX(-50px);
+          transform: translateX(-50px); }
 
 .loadIn {
-  -webkit-transition: opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
-  transition: opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
-  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
-  transition: transform .4s ease-in-out, opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
+  -webkit-transition: opacity .4s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: opacity .4s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, opacity .4s ease-in-out;
+  transition: transform .3s ease-in-out, opacity .4s ease-in-out, -webkit-transform .3s ease-in-out;
   opacity: 1;
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
@@ -678,9 +678,9 @@ body {
   transition: transform .4s ease-in-out, opacity .4s ease-in-out;
   transition: transform .4s ease-in-out, opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
   opacity: 0;
-  -webkit-transform: translateX(25px);
-      -ms-transform: translateX(25px);
-          transform: translateX(25px); }
+  -webkit-transform: translateX(50px);
+      -ms-transform: translateX(50px);
+          transform: translateX(50px); }
 
 /* ======== global ======== */
 .container-fluid .mb-15 {
