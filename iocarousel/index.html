@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>IO carousel</title> 
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+ <style>
+
+#gallery,
+#gallery2 {
+  padding: 20px;
+}
+
+.io-items-container {
+  max-width: 840px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.buttons {
+  text-align: center;
+}
+
+/* next button */
+.next-leave-active {
+  transition: opacity 0.3s linear,
+              transform 0.3s linear;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.next-enter-active {
+  transition: opacity 0.3s linear,
+              transform 0.3s linear;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.next-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+
+/* prev button */
+.prev-leave-active {
+  transition: opacity 0.3s linear,
+              transform 0.3s linear;
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.prev-enter-active {
+  transition: opacity 0.3s linear,
+              transform 0.3s linear;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.prev-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+
+
+
+
+
+
+
+/* next button */
+.io1-next-leave-active {
+  transition: opacity 0.3s linear,
+              transform 0.3s linear;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.io1-next-enter-active {
+  transition: opacity 0.3s linear,
+              transform 0.3s linear;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.io1-next-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+
+/* prev button */
+.io1-prev-leave-active {
+  transition: opacity 0.3s linear,
+              transform 0.3s linear;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.io1-prev-enter-active {
+  transition: opacity 0.3s linear,
+              transform 0.3s linear;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.io1-prev-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+</style>
+
+</head>      
+<body>
+
+  <div id="gallery"> 
+    <div class="buttons">
+      <button class="btn btn-primary prev">Prev</button>
+      <button class="btn btn-primary next">Next</button>
+    </div>
+    <div class="io-items-container">
+      <div><img src="http://via.placeholder.com/800x150?text=Hello1"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello2"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello3"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello4"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello5"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello6"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello7"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello8"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello9"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello10"></div>
+    </div>
+  </div>
+
+
+  <div id="gallery2"> 
+    <div class="io-items-container">
+      <img src="http://via.placeholder.com/800x150?text=Hello1">
+      <img src="http://via.placeholder.com/800x150?text=Hello2">
+      <img src="http://via.placeholder.com/800x150?text=Hello3">
+      <img src="http://via.placeholder.com/800x150?text=Hello4">
+      <img src="http://via.placeholder.com/800x150?text=Hello5">
+      <img src="http://via.placeholder.com/800x150?text=Hello6">
+      <img src="http://via.placeholder.com/800x150?text=Hello7">
+      <img src="http://via.placeholder.com/800x150?text=Hello8">
+      <img src="http://via.placeholder.com/800x150?text=Hello9">
+      <img src="http://via.placeholder.com/800x150?text=Hello10">    
+    </div>
+  </div>
+
+
+</body>
+
+<script src="iocarousel/iocarousel.min.js"></script>
+
+<script>
+    
+  new IoCarousel({
+    el: '#gallery'
+  }); 
+
+  new IoCarousel({
+    el: '#gallery2',
+    autoplay: true,
+    autoplayInterval: 3000,
+    pauseOnHover: true,
+    prefixClass: 'io1-'
+  }); 
+
+</script>
+</html>
