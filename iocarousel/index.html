@@ -15,7 +15,7 @@
   padding: 20px;
 }
 
-.io-items-container {
+.io-items-container div {
   max-width: 840px;
   margin: 20px auto;
   padding: 20px;
@@ -81,23 +81,28 @@
 
 
 /* next button */
-.io1-next-leave-active {
-  transition: opacity 0.3s linear,
-              transform 0.3s linear;
+div .io1-next-leave-active {
+  transition: opacity 1s linear,
+              transform 1s linear,
+              box-shadow 1s linear;
   opacity: 0;
-  transform: scale(0.95);
+  box-shadow: 0 0 0 rgba(0,0,0,0.1);
+  transform: translateY(100px);
 }
 
-.io1-next-enter-active {
-  transition: opacity 0.3s linear,
-              transform 0.3s linear;
+div .io1-next-enter-active {
+  transition: opacity 1s linear,
+              transform 1s linear,
+              box-shadow 1s linear;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.1);
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
 }
 
-.io1-next-enter {
+div .io1-next-enter {
+  box-shadow: 0 0 0 rgba(0,0,0,0.1);
   opacity: 0;
-  transform: scale(0.95);
+  transform: translateY(-100px);
 }
 
 
@@ -148,16 +153,16 @@
 
   <div id="gallery2"> 
     <div class="io-items-container">
-      <img src="http://via.placeholder.com/800x150?text=Hello1">
-      <img src="http://via.placeholder.com/800x150?text=Hello2">
-      <img src="http://via.placeholder.com/800x150?text=Hello3">
-      <img src="http://via.placeholder.com/800x150?text=Hello4">
-      <img src="http://via.placeholder.com/800x150?text=Hello5">
-      <img src="http://via.placeholder.com/800x150?text=Hello6">
-      <img src="http://via.placeholder.com/800x150?text=Hello7">
-      <img src="http://via.placeholder.com/800x150?text=Hello8">
-      <img src="http://via.placeholder.com/800x150?text=Hello9">
-      <img src="http://via.placeholder.com/800x150?text=Hello10">    
+      <div><img src="http://via.placeholder.com/800x150?text=Hello1"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello2"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello3"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello4"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello5"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello6"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello7"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello8"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello9"></div>
+      <div><img src="http://via.placeholder.com/800x150?text=Hello10"></div>   
     </div>
   </div>
 
