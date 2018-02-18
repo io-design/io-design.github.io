@@ -368,9 +368,8 @@
 
     <script>
       $('a.web-contact').on('click', function() {
-        console.log(1);
         var target = $('a.web-contact').attr("href");
-        $('body,html').animate({ 'scrollTop': $(document).height()},
+        $('body,html').animate({ 'scrollTop': $('.block7-fluid').offset().top - 50},
           500
         );  
       }); 
