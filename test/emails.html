@@ -125,15 +125,15 @@
                 <p class="b7-pos">Graphic Designer</p>
 
                 <a href="mailto:sveta.iordatii@gmail.com">
-                  <img src="" data-echo="assets/img/b7-1.png" class="cstLazyLoad">
+                  <img src="assets/img/b7-1.png" class="cstLazyLoad">
                   sveta.iordatii@gmail.com
                 </a>
                 <a href="">
-                  <img src="" data-echo="assets/img/b7-2.png" class="cstLazyLoad">
+                  <img src="assets/img/b7-2.png" class="cstLazyLoad">
                   sveta_geraysmchuk
                 </a>
                 <a href="https://www.upwork.com/o/profiles/users/_~01bea2dc183c19e97a" target="_blank" class="mb-50">
-                  <img src="" data-echo="assets/img/b7-3.png" class="cstLazyLoad">
+                  <img src="assets/img/b7-3.png" class="cstLazyLoad">
                   Svitlana Iordatii
                 </a>
               </div>
@@ -142,22 +142,22 @@
                 <p class="b7-pos">Front-end Developer</p>
 
                 <a href="mailto:iordatiy1991@gmail.com">
-                  <img src="" data-echo="assets/img/b7-1.png" class="cstLazyLoad">
+                  <img src="assets/img/b7-1.png" class="cstLazyLoad">
                   iordatiy1991@gmail.com
                 </a>
                 <a href="">
-                  <img src="" data-echo="assets/img/b7-2.png" class="cstLazyLoad">
+                  <img src="assets/img/b7-2.png" class="cstLazyLoad">
                   tricksterololo
                 </a>
                 <a href="https://www.upwork.com/o/profiles/users/_~015eab1e967a909e1c" target="_blank" class="mb-50">
-                  <img src="" data-echo="assets/img/b7-3.png" class="cstLazyLoad">
+                  <img src="assets/img/b7-3.png" class="cstLazyLoad">
                   Oleksii Iordatii
                 </a>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-12 col-lg-4 col-xl-5 d-flex align-items-center">
-            <img src="" data-echo="assets/img/logo_IO_bot.svg" class="img-responsive mx-auto cstLazyLoad web-io-footer">
+            <img src="assets/img/logo_IO_bot.svg" class="img-responsive mx-auto cstLazyLoad web-io-footer">
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@
     <!-- block8 -->
     <div class="container-fluid block8-fluid">
       <p>© IOdesign 2018. All rights reserved</p>
-      <img src="" data-echo="assets/img/b8-circ.png" class="cstLazyLoad b8-circ">
+      <img src="assets/img/b8-circ.png" class="cstLazyLoad b8-circ">
     </div>
 
 
@@ -200,7 +200,7 @@
 
 
             <div id="gallery"> 
-              <div class="io-items-container">
+              <div class="io-items">
                 <img src="assets/img/email/1.jpg" class="img-responsive mx-auto">
                 <img src="assets/img/email/2.jpg" class="img-responsive mx-auto">
                 <img src="assets/img/email/3.jpg" class="img-responsive mx-auto">
@@ -246,80 +246,31 @@
 
 
 
-    <script src="assets/iocarousel/iocarousel.min.js"></script>
-    <script>
-      var ic = new IoCarousel({
-        el: '#gallery'
-      }); 
-    </script>
-
-
-
-
-
-
-
-
-
-    <script>
-      $(document).ready(function() {
-        
-        //lazy load
-        var allimages= document.querySelectorAll('img.cstLazyLoad');
-        for (var i=0; i < allimages.length; i++) {
-          if (allimages[i].getAttribute('data-echo')) {
-            allimages[i].setAttribute('src', allimages[i].getAttribute('data-echo'));
-          }
-        }
-      })
-    </script>
-
-
-
-
-
-
-
-    <script src="assets/iocarousel/swipe.js"></script>
-    <script>
-      var swiper = new Swipe('.modal-body');
-      swiper.onLeft(function() { ic.goNext() });
-      swiper.onRight(function() { ic.goPrev() });
-      swiper.run();
-    </script>
-
-
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7/dist/polyfill.min.js"></script>
+    <script src="assets/iogal/iogal2.js"></script>
     <script>
       window.onload = function() {
+        var ig = new IoGal({
+          el: '#gallery',
+          swipe: true,
+          swipeSelector: '.modal-body'
+        }); 
+
         var allImgToAddAttr = document.querySelectorAll('.web-img-wrap img');
-        
+          
         for (var i = 0; i < allImgToAddAttr.length; i++) {
           allImgToAddAttr[i].setAttribute('data-open', i);
         }
 
         $('.web-img-wrap img').on('click', function() {
-          var dataOpen = $(this).attr('data-open');
-          var c = Number(dataOpen);
-          var b = $('.io-items-container img');
-
-          b[ic.activeImage].style.display = 'none';
-          b[c].style.display = 'block';
-
-          ic.activeImage = Number(dataOpen);
+          var dataOpen = Number($(this).attr('data-open'));
+          ig.skipTo(dataOpen);
         })
 
-        $('.go-prev-div, .prev-modal-img').click(function() {ic.goPrev();});
-        $('.go-next-div, .next-modal-img').click(function() {ic.goNext();});
-
-
-
+        $('.go-prev-div, .prev-modal-img').click(function() {ig.goPrev();});
+        $('.go-next-div, .next-modal-img').click(function() {ig.goNext();});
       }
     </script>
-
 
     <script>
       $('a.web-contact').on('click', function() {

@@ -293,21 +293,15 @@
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7/dist/polyfill.min.js"></script>
     <script src="assets/iogal/iogal2.js"></script>
     <script>
-      var ig = new IoGal({
-        el: '#gallery',
-        swipe: true
-      }); 
-    </script>
-
- 
-
-
-
-
-    <script>
       window.onload = function() {
+        var ig = new IoGal({
+          el: '#gallery',
+          swipe: true,
+          swipeSelector: '.modal-body'
+        }); 
+
         var allImgToAddAttr = document.querySelectorAll('.web-img-wrap img');
-        
+          
         for (var i = 0; i < allImgToAddAttr.length; i++) {
           allImgToAddAttr[i].setAttribute('data-open', i);
         }
@@ -321,7 +315,6 @@
         $('.go-next-div, .next-modal-img').click(function() {ig.goNext();});
       }
     </script>
-
 
     <script>
       $('a.web-contact').on('click', function() {
