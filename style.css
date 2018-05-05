@@ -145,6 +145,11 @@ i.fa-code {
     background:#4267b2;
 }
 
+.social a.upwork:hover{
+    color: #fff;
+    background:#37a000;
+}
+
 .social a.skype:hover{
     color: #fff;
     background:#1da1f2;
@@ -461,6 +466,7 @@ p {
   font-size:11px;
   text-decoration:none !important;
   font-weight:bold;
+  cursor:pointer;
 } 
 
 .iordatii-btn2:before{
